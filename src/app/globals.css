@@ -265,9 +265,10 @@ section { padding: 0 4vw; }
 }
 .work-year {
   font-family: var(--font-mono), monospace;
-  font-size: 12px;
+  font-size: 13.5px;
+  font-weight: 500;
   letter-spacing: 0.1em;
-  color: var(--ink-dim);
+  color: var(--ink);
 }
 .work-body {
   display: grid;
@@ -352,7 +353,7 @@ section { padding: 0 4vw; }
   color: var(--ink-dim);
 }
 .xp-role { font-weight: 700; font-size: 19px; }
-.xp-role .co { color: var(--ink-dim); font-weight: 500; }
+.xp-role .co { color: var(--ink); font-weight: 500; }
 .xp-note {
   font-size: 14.5px;
   color: var(--ink-dim);
