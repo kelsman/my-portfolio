@@ -32,7 +32,10 @@ export default function Contact() {
   const [user, domain] = email.split("@");
 
   return (
-    <section className="contact" id="contact">
+    <section className="contact" id="contact" aria-labelledby="contact-heading">
+      <h2 className="sr-only" id="contact-heading">
+        Contact
+      </h2>
       <div className="mono-row" data-reveal>
         <span className="mono">
           <span className="tick">05</span> / Contact

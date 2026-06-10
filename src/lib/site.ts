@@ -1,0 +1,28 @@
+export const site = {
+  name: "Kelvin Oigiangbe",
+  title: "Kelvin Oigiangbe — Senior Software Engineer",
+  description:
+    "Senior software engineer in Lagos, Nigeria designing distributed systems that stay simple under pressure — event-driven pipelines, multi-tenant platforms, and APIs trusted with real money, real-time data, and real users.",
+  url: "https://kelsman.github.io/my-portfolio",
+  email: "osekelvin22@gmail.com",
+  github: "https://github.com/kelsman",
+  linkedin: "https://www.linkedin.com/in/kelvin-oigiangbe-a78590121/",
+  jobTitle: "Senior Software Engineer",
+  location: "Lagos, Nigeria",
+  keywords: [
+    "Kelvin Oigiangbe",
+    "Senior Software Engineer",
+    "Backend Engineer",
+    "Distributed Systems",
+    "Platform Architecture",
+    "Node.js",
+    "NestJS",
+    "TypeScript",
+    "Kafka",
+    "Kubernetes",
+    "PostgreSQL",
+    "Snowflake",
+    "AWS",
+    "Lagos Nigeria",
+  ],
+};

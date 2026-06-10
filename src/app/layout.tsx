@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Syne, JetBrains_Mono } from "next/font/google";
+import { site } from "@/lib/site";
 import "./globals.css";
 
 const syne = Syne({
@@ -17,9 +18,55 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kelvin Oigiangbe — Senior Software Engineer",
-  description:
-    "I design distributed systems that stay simple under pressure — event-driven pipelines, multi-tenant platforms, and APIs trusted with real money, real-time data, and real users.",
+  metadataBase: new URL(site.url),
+  title: site.title,
+  description: site.description,
+  keywords: site.keywords,
+  authors: [{ name: site.name, url: site.url }],
+  creator: site.name,
+  publisher: site.name,
+  category: "technology",
+  alternates: {
+    canonical: site.url,
+  },
+  openGraph: {
+    type: "website",
+    url: site.url,
+    siteName: site.title,
+    title: site.title,
+    description: site.description,
+    locale: "en_US",
+    images: [
+      {
+        url: `${site.url}/og.png`,
+        width: 1200,
+        height: 630,
+        alt: site.title,
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: site.title,
+    description: site.description,
+    images: [`${site.url}/og.png`],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0e0e0c",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({

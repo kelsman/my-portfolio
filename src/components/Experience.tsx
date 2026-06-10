@@ -2,7 +2,10 @@ import { experience } from "@/lib/data";
 
 export default function Experience() {
   return (
-    <section className="experience" id="experience">
+    <section className="experience" id="experience" aria-labelledby="experience-heading">
+      <h2 className="sr-only" id="experience-heading">
+        Experience
+      </h2>
       <div className="section-head" data-reveal>
         <span className="mono">
           <span className="tick">02</span> / Experience

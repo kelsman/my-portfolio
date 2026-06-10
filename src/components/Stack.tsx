@@ -2,7 +2,10 @@ import { stack } from "@/lib/data";
 
 export default function Stack() {
   return (
-    <section className="stack" id="stack">
+    <section className="stack" id="stack" aria-labelledby="stack-heading">
+      <h2 className="sr-only" id="stack-heading">
+        Stack
+      </h2>
       <div className="section-head" data-reveal>
         <span className="mono">
           <span className="tick">03</span> / Stack

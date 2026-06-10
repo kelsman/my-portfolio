@@ -46,6 +46,19 @@ a { color: inherit; text-decoration: none; }
 .grid-overlay span { border-left: 1px solid var(--line); opacity: 0.5; }
 .grid-overlay span:first-child { border-left: none; }
 
+/* ---- visually hidden (screen readers & crawlers only) ---- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ---- mono label utility ---- */
 .mono {
   font-family: var(--font-mono), monospace;
@@ -131,7 +144,9 @@ section { padding: 0 4vw; }
   text-transform: uppercase;
   line-height: 0.88;
   letter-spacing: -0.02em;
-  font-size: clamp(64px, 13.5vw, 230px);
+  /* 9.6vw keeps the 9-letter outlined surname (~9.4em wide) inside the
+     92vw content column at every viewport — no cropped letters */
+  font-size: clamp(64px, 9.6vw, 230px);
   user-select: none;
 }
 .hero-name .row {

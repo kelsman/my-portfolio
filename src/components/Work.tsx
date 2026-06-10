@@ -79,7 +79,10 @@ export default function Work() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="work" id="work">
+    <section className="work" id="work" aria-labelledby="work-heading">
+      <h2 className="sr-only" id="work-heading">
+        Selected Work
+      </h2>
       <div className="section-head" data-reveal>
         <span className="mono">
           <span className="tick">01</span> / Selected Work
@@ -96,7 +99,7 @@ export default function Work() {
           >
             <div className="work-item-top">
               <span className="work-index">{p.index}</span>
-              <h2 className="work-title">{p.title}</h2>
+              <h3 className="work-title">{p.title}</h3>
               <span className="work-year">{p.year}</span>
             </div>
             <div className="work-body">

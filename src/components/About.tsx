@@ -2,7 +2,10 @@ import { aboutFacts } from "@/lib/data";
 
 export default function About() {
   return (
-    <section className="about" id="about">
+    <section className="about" id="about" aria-labelledby="about-heading">
+      <h2 className="sr-only" id="about-heading">
+        About
+      </h2>
       <div className="section-head" data-reveal>
         <span className="mono">
           <span className="tick">04</span> / About
